@@ -1,6 +1,5 @@
 package com.example.kotlinhm5mvvm.ui.fragments
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +8,6 @@ import com.example.kotlinhm5mvvm.databinding.ListItemBinding
 class ThirdAdapter(private var list: ArrayList<String>)
     : RecyclerView.Adapter<ThirdAdapter.ViewHolder>() {
 
-    @SuppressLint("NotifyDataSetChanged")
     override fun getItemCount(): Int {
         return list.size
     }

@@ -6,14 +6,8 @@ import androidx.lifecycle.ViewModel
 class SharedViewModel: ViewModel() {
 
     val counts = MutableLiveData<ArrayList<String>>()
-    private var list = ArrayList<String>()
 
-    fun clickCount(item: String){
-        if (item == "+"){
-            list.add("+")
-        } else {
-            list.add("-")
-        }
+    fun clickCount(list: ArrayList<String>){
         counts.value = list
     }
 }

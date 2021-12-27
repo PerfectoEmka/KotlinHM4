@@ -13,6 +13,7 @@ class FirstFragment : Fragment() {
 
     private lateinit var model: SharedViewModel
     private lateinit var binding: FragmentFirstBinding
+    private var list = ArrayList<String>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,11 +28,13 @@ class FirstFragment : Fragment() {
         model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
         binding.btnMinus.setOnClickListener {
-            model.clickCount("-")
+            list.add("-")
+            model.clickCount(list)
         }
 
         binding.btnPlus.setOnClickListener {
-            model.clickCount("+")
+            list.add("+")
+            model.clickCount(list)
         }
     }
 }
